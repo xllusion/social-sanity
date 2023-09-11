@@ -1,6 +1,5 @@
 import type { GetServerSideProps, GetStaticProps, GetStaticPropsContext, NextPage } from 'next';
 import sanityClient, { ClientConfig } from '@sanity/client';
-import type * as Schema from '../../backend/schemas/schema';
 import { Video } from '../../types';
 
 import Head from 'next/head';
@@ -9,8 +8,6 @@ import axios from 'axios';
 import VideoCard from '../components/content/VideoCard';
 import NoResults from '../components/content/NoResults';
 import { ParsedUrlQuery } from 'querystring';
-
-//type QueryResult = Array<Schema.Post>;
 
 interface IProps {
   videos: Video[];
